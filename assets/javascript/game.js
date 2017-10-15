@@ -7,9 +7,10 @@ var currentgoal = $("#current-goal");
 var game = {
 randomNumber: function() {
     var x = (Math.floor((Math.random() * 101) + 19));
+    currentgoal.attr("value", x);
     currentgoal.html(x);
-    x = $("#current-goal").val(x);
-    console.log(currentgoal.attr("value"));
+
+
 },
 randombuttonvalue: function() {
     var i = $("#crystal1")
@@ -33,16 +34,6 @@ currentscore: function() {
 	// add
 },
 gamerunning: function(){
-	var score = $("#current-goal").attr("html");
-	score = parseInt(score);
-
-	if (counter === score) {
-      console.log("winner, winner");
-    }
-
-    else if (counter >= score) {
-      console.log("You lose!!");
-    }
 
 },
 
@@ -55,16 +46,7 @@ winsLossescounter: function() {
 
 
 
-//This starts the game when the page loads
-window.onload = function() {
-$("#wins").html("text");
-$("#current-score").html(counter);
-game.randomNumber();
-game.randombuttonvalue();
-game.currentscore();
-game.gamerunning();
 
-};
 //This adds the value of the crystal clicked to the total score
 $(".btn").on("click", function() {
 var crystalValue = ($(this).attr("value"));
@@ -72,6 +54,24 @@ var crystalValue = ($(this).attr("value"));
 
     counter += crystalValue;
 $("#current-score").html(counter);
-
 });
-console.log(currentgoal)
+//This starts the game when the page loads
+window.onload = function() {
+$("#current-score").html(counter);
+game.randomNumber();
+game.randombuttonvalue();
+game.currentscore();
+game.gamerunning();
+
+};
+var score = ($("#current-goal").attr("value"));
+	score = parseInt(score);
+	console.log(score);
+	console.log(counter);
+	if (counter === score) {
+      console.log("winner, winner");
+    }
+
+    else if (counter >= score) {
+      console.log("You lose!!");
+    }
