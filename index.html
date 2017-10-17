@@ -1,15 +1,14 @@
 <html>
 <head>
 	 <title>Crystal Game</title>
-<!-- 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 </head>
 <body>
-	<h1 class="header">CrystalsCollector!</h1>
+	<h1 class="header">Crystals Collector!</h1>
 		<div class="row">
-			<div class="container-fluid col-md-6">
+			<div class="container-fluid col-md-12" id="instructions">
 				<p>You will be given a random number at the start of the game.</p>
 				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
 				<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
@@ -18,27 +17,25 @@
 			</div>
 		</div>	
 		<div class="row">	
-			<div class="container col-md-4" id="current-goal">test
-			</div>
-			<div class="container col-md-2" id="wins-losses">
+			<div class="container col-md-6" id="goalpost">Current Goal: <span id="current-goal">
+			</span></div>
+			<div class="container col-md-6" id="wins-losses">
 				<p>Wins: <span id="wins"></span></p>
 				<p>Losses: <span id="losses"></span></p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id ="buttonrow">
 			<button class="btn" id="crystal1"><img src="assets/images/silver.png"></button>
 			<button class="btn" id="crystal2"><img src="assets/images/green.png"></button>
 			<button class="btn" id="crystal3"><img src="assets/images/blue.png"></button>
 			<button class="btn" id="crystal4"><img src="assets/images/red.png"></button>
 		</div>	
-		<div class="row">
-			<div class="container-fluid col-md-6">
-				<div class="header" id="topper">
+		<div class="row">	
+			<div class="container-fluid" id="topper">
+				<div class="header" >
 				Your total score is:
 				</div>	
-				<div id="current-score">
-				
-				</div>	
+				<span id="current-score"></span>	
 
 			</div>
 		</div>

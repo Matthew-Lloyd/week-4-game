@@ -1,3 +1,26 @@
-.btn {
-background-image: "assets/images/blue_stone.png";
+body{
+	color: white;
+	background-image: url(../images/darkdenim3/darkdenim3.png);
+	background-repeat: repeat; 
+	height: 100%;
+	font-family: 'Play', sans-serif;
+
+}.row{
+	text-align: center;
+}
+.header{
+	text-align: center;
+}
+.container-fluid{
+	text-align: center;	
+}
+#goalpost, #wins-losses, #topper{
+	font-size: 225%;
+}
+.btn{
+	width: 100px;
+	height: 100px;
+}
+#instructions{
+	font-size: 21px;
 }
